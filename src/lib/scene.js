@@ -77,9 +77,7 @@ const updateCamera = () => {
 const animate = () => {
   requestAnimationFrame(animate);
   earth.rotation.y += 0.005;
-  // cube.rotation.z += 0.01;
   updateCamera();
-
   renderer.autoClear = false;
   renderer.clear();
   renderer.render(scene, camera);

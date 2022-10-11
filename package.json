@@ -4,6 +4,7 @@
   "description": "Application that calculates when will you be a billion seconds old",
   "author": "Daniel Almonacid",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

@@ -1,7 +1,19 @@
 @mixin tick($starting-point) {
-  @for $i from 1 through 20 {
-    #{$i*5}% {
-      transform: rotate(($starting-point + #{36 * $i}) deg);
+  @keyframes tick#{$starting-point} {
+    $counter: 0;
+    @for $i from 0 to 19 {
+      @if $i%2==0 {
+        #{$i * 5}% {
+          transform: rotate(#{$starting-point + (36 * $counter)}deg);
+        }
+        #{($i+1) * 5}% {
+          transform: rotate(#{$starting-point + (36 * $counter)}deg);
+        }
+        $counter: $counter + 1;
+      }
+    }
+    100% {
+      transform: rotate(#{$starting-point + 360}deg);
     }
   }
 }

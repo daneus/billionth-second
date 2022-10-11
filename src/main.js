@@ -1,4 +1,5 @@
 import './sass/main.scss';
+// @ts-ignore
 import App from './App.svelte';
 
 const app = new App({

@@ -33,580 +33,31 @@
         </svg>
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <rect x="109" y="33" width="19" height="86" rx="9.5" fill="#F5F5F5" />
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <svg
-          class="zero"
-          width="237"
-          height="237"
-          viewBox="0 0 237 237"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M237 118.5C237 183.946 183.946 237 118.5 237C53.0543 237 0 183.946 0 118.5C0 53.0543 53.0543 0 118.5 0C183.946 0 237 53.0543 237 118.5ZM23.0883 118.5C23.0883 171.194 65.8056 213.912 118.5 213.912C171.194 213.912 213.912 171.194 213.912 118.5C213.912 65.8056 171.194 23.0883 118.5 23.0883C65.8056 23.0883 23.0883 65.8056 23.0883 118.5Z"
-            fill="#F5F5F5"
-          />
-          <g filter="url(#filter0_d_23_3)">
-            <rect
-              x="109"
-              y="33"
-              width="19"
-              height="86"
-              rx="9.5"
-              fill="#F5F5F5"
-            />
-            <rect
-              x="109.5"
-              y="33.5"
-              width="18"
-              height="85"
-              rx="9"
-              stroke="black"
-            />
-          </g>
-          <defs>
-            <filter
-              id="filter0_d_23_3"
-              x="105"
-              y="33"
-              width="27"
-              height="94"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-            >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-              />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-              />
-              <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_23_3"
-              />
-              <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_23_3"
-                result="shape"
-              />
-            </filter>
-          </defs>
-        </svg>
+        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
       </div>
     </div>
     <div class="subtitle">SECONDS</div>
@@ -614,6 +65,18 @@
 </main>
 
 <style lang="scss">
+  @use '../src/sass/mixins/mixins' as m;
+
+  @include m.tick(36);
+  @include m.tick(72);
+  @include m.tick(108);
+  @include m.tick(144);
+  @include m.tick(180);
+  @include m.tick(216);
+  @include m.tick(252);
+  @include m.tick(288);
+  @include m.tick(324);
+
   svg {
     display: block;
   }
@@ -653,96 +116,30 @@
     font-weight: 600;
   }
   .number-container > .zero-container:nth-child(2) {
-    animation: tick 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
+    animation: tick36 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(3) {
-    transform: rotate(72deg);
+    animation: tick72 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(4) {
-    transform: rotate(108deg);
+    animation: tick108 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(5) {
-    transform: rotate(144deg);
+    animation: tick144 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(6) {
-    transform: rotate(180deg);
+    animation: tick180 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(7) {
-    transform: rotate(216deg);
+    animation: tick216 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(8) {
-    transform: rotate(252deg);
+    animation: tick252 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(9) {
-    transform: rotate(288deg);
+    animation: tick288 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
   .number-container > .zero-container:nth-child(10) {
-    transform: rotate(324deg);
-  }
-
-  @keyframes tick {
-    0% {
-      transform: rotate(36deg);
-    }
-    5% {
-      transform: rotate(36deg);
-    }
-    10% {
-      transform: rotate(72deg);
-    }
-    15% {
-      transform: rotate(72deg);
-    }
-    20% {
-      transform: rotate(108deg);
-    }
-    25% {
-      transform: rotate(108deg);
-    }
-    30% {
-      transform: rotate(144deg);
-    }
-    35% {
-      transform: rotate(144deg);
-    }
-    40% {
-      transform: rotate(180deg);
-    }
-    45% {
-      transform: rotate(180deg);
-    }
-    50% {
-      transform: rotate(216deg);
-    }
-    55% {
-      transform: rotate(216deg);
-    }
-    60% {
-      transform: rotate(252deg);
-    }
-    65% {
-      transform: rotate(252deg);
-    }
-    70% {
-      transform: rotate(288deg);
-    }
-    75% {
-      transform: rotate(288deg);
-    }
-    80% {
-      transform: rotate(324deg);
-    }
-    85% {
-      transform: rotate(324deg);
-    }
-    90% {
-      transform: rotate(360deg);
-    }
-    95% {
-      transform: rotate(360deg);
-    }
-    100% {
-      transform: rotate(396deg);
-    }
+    animation: tick324 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
   }
 </style>
