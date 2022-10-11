@@ -1,7 +1,5 @@
 import { Curve, Vector3 } from 'three';
 
-// GrannyKnot
-
 class GrannyKnot extends Curve {
   getPoint(t, optionalTarget = new Vector3()) {
     const point = optionalTarget;

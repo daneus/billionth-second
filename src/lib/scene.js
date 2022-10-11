@@ -9,8 +9,9 @@ const gui = new dat.GUI();
 var clock;
 clock = new THREE.Clock();
 
-//Initiating Scene
+//Initiating Scenes
 const scene = new THREE.Scene();
+const earthScene = new THREE.Scene();
 
 //Initiating Camera
 const camera = new THREE.PerspectiveCamera(
@@ -29,25 +30,34 @@ const material = new THREE.MeshBasicMaterial({
 const tube = new THREE.Mesh(geometry, material);
 
 //Initiating Earth geometry
-const geometry2 = new THREE.SphereGeometry();
-const material2 = new THREE.MeshStandardMaterial({
-  color: 0xff6347,
-});
-const earth = new THREE.Mesh(geometry2, material2);
+const earthTexture = new THREE.TextureLoader().load(
+  '../src/assets/earthTexture.jpg'
+);
+const normalEarthTexture = new THREE.TextureLoader().load(
+  '../src/assets/earthNormalMap.jpg'
+);
+const earth = new THREE.Mesh(
+  new THREE.SphereGeometry(),
+  new THREE.MeshStandardMaterial({
+    map: earthTexture,
+    normalMap: normalEarthTexture,
+  })
+);
 earth.position.x = -2;
 earth.position.y = 4;
 earth.position.z = 2;
-scene.add(earth);
+earth.rotation.x = 5.15;
+earth.rotation.y = 3;
+earthScene.add(earth);
 
-//Creating lights
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
-
+//Creating ambient light
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight);
 scene.add(ambientLight);
 
-camera.position.z = 20;
+//Creating "sun light" for Earth
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(-32, -18, -20);
+earthScene.add(pointLight);
 
 //Creating renderer
 let renderer;
@@ -70,11 +80,14 @@ const updateCamera = () => {
 //Animate function
 const animate = () => {
   requestAnimationFrame(animate);
-  // cube.rotation.x += 0.01;
   earth.rotation.y += 0.005;
   // cube.rotation.z += 0.01;
   updateCamera();
+
+  renderer.autoClear = false;
+  renderer.clear();
   renderer.render(scene, camera);
+  renderer.render(earthScene, camera);
 };
 
 //Function that triggers on resize
@@ -116,6 +129,5 @@ export const createScene = (element) => {
   animate();
 };
 
-gui.add(earth.position, 'x').min(-20).max(20).step(0.1);
-gui.add(earth.position, 'y').min(-20).max(20).step(0.1);
-gui.add(earth.position, 'z').min(-20).max(20).step(0.1);
+gui.add(earth.rotation, 'x').min(4).max(6).step(0.1);
+gui.add(earth.rotation, 'y').min(2).max(3.5).step(0.1);
