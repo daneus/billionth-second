@@ -62,6 +62,11 @@
     </div>
     <div class="subtitle">SECONDS</div>
   </div>
+  <div class="header-container">
+    <h1 class="header">
+      When will you be a <span class="billion">billion</span> seconds old?
+    </h1>
+  </div>
 </main>
 
 <style lang="scss">
@@ -80,6 +85,9 @@
   svg {
     display: block;
   }
+  img {
+    user-select: none;
+  }
   .main-container {
     z-index: 0;
     width: auto;
@@ -88,14 +96,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .title-container {
-    border: 2px solid yellow;
+    // border: 2px solid yellow;
   }
   .number-container {
     display: flex;
     flex-direction: row;
-    border: 3px solid red;
+    // border: 3px solid red;
     justify-content: center;
     column-gap: 0.75vmin;
     padding: 0 1.8vmin;
@@ -141,5 +150,19 @@
   }
   .number-container > .zero-container:nth-child(10) {
     animation: tick324 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  }
+  .header-container {
+    color: white;
+    text-align: center;
+    font-size: clamp(0.4rem, 1.8vmin, 2.7rem);
+  }
+  .header {
+    font-weight: 400;
+  }
+  .billion {
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 0.4em #0467b8, 0 0 0.425em #1585e0, 0 0 0.45em #0467b8,
+      0 0 0.275em #1585e0, 0 0 0.3em #1585e0;
   }
 </style>
