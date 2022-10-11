@@ -613,9 +613,7 @@
   </div>
 </main>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
+<style lang="scss">
   svg {
     display: block;
   }

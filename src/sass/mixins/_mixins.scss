@@ -1,0 +1,7 @@
+@mixin tick($starting-point) {
+  @for $i from 1 through 20 {
+    #{$i*5}% {
+      transform: rotate(($starting-point + #{36 * $i}) deg);
+    }
+  }
+}
