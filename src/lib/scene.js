@@ -1,9 +1,5 @@
 import * as THREE from 'three';
 import { GrannyKnot } from '../misc/CurvesExtra';
-import * as dat from 'dat.gui';
-
-//Initiating GUI Helper
-const gui = new dat.GUI();
 
 //Initiating Clock instance
 var clock;
@@ -128,6 +124,3 @@ export const createScene = (element) => {
   resize();
   animate();
 };
-
-gui.add(earth.rotation, 'x').min(4).max(6).step(0.1);
-gui.add(earth.rotation, 'y').min(2).max(3.5).step(0.1);
