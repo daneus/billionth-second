@@ -1,6 +1,9 @@
 {
   "name": "billionth-second",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Application that calculates when will you be a billion seconds old",
+  "author": "Daniel Almonacid",
+  "license": "MIT",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
