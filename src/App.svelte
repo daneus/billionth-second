@@ -1,12 +1,213 @@
 <script>
   import { onMount } from 'svelte';
   import { createScene } from './lib/scene';
+  import { howManyDays, isNumeric } from './helpers/helperFunctions';
 
   let canvas;
-
   onMount(() => {
     createScene(canvas);
   });
+
+  let dayValue = '';
+  let monthValue = '';
+  let yearValue = '';
+  let hourValue = '';
+  let minuteValue = '';
+  let buttonClicked = false;
+  let isDayValid = true;
+  let isDayFieldClicked = false;
+  let isMonthValid = true;
+  let isYearValid = true;
+  let isHourValid = true;
+  let isMinuteValid = true;
+  let isButtonDisabled = true;
+  let dateDisplayed = '';
+  let isFuture = false;
+
+  const handleDayClick = () => {
+    isDayFieldClicked = true;
+  };
+  const handleDayInput = (e) => {
+    if (!isNumeric(e.data)) {
+      e.preventDefault;
+    }
+    dayValue = e.target.value;
+    const daysToCompare = howManyDays(
+      parseInt(monthValue),
+      parseInt(yearValue)
+    );
+    if (
+      parseInt(dayValue) > daysToCompare ||
+      dayValue === '' ||
+      parseInt(dayValue) < 1
+    ) {
+      if (isDayFieldClicked) {
+        isDayValid = false;
+      }
+    } else {
+      isDayValid = true;
+    }
+  };
+  const handleMonthInput = (e) => {
+    if (!isNumeric(e.data)) {
+      e.preventDefault;
+    }
+    monthValue = e.target.value;
+    if (
+      parseInt(monthValue) > 12 ||
+      monthValue === '' ||
+      parseInt(monthValue) < 1
+    ) {
+      isMonthValid = false;
+    } else {
+      isMonthValid = true;
+    }
+
+    const daysToCompare = howManyDays(
+      parseInt(monthValue),
+      parseInt(yearValue)
+    );
+    if (
+      parseInt(dayValue) > daysToCompare ||
+      dayValue === '' ||
+      parseInt(dayValue) < 1
+    ) {
+      if (isDayFieldClicked) {
+        isDayValid = false;
+      }
+    } else {
+      isDayValid = true;
+    }
+  };
+  const handleYearInput = (e) => {
+    const currentYear = new Date().getFullYear();
+    if (!isNumeric(e.data)) {
+      e.preventDefault;
+    }
+    yearValue = e.target.value;
+    if (
+      parseInt(yearValue) > currentYear ||
+      yearValue === '' ||
+      parseInt(yearValue) < 1000
+    ) {
+      isYearValid = false;
+    } else {
+      isYearValid = true;
+    }
+
+    const daysToCompare = howManyDays(
+      parseInt(monthValue),
+      parseInt(yearValue)
+    );
+    if (
+      parseInt(dayValue) > daysToCompare ||
+      dayValue === '' ||
+      parseInt(dayValue) < 1
+    ) {
+      if (isDayFieldClicked) {
+        isDayValid = false;
+      }
+    } else {
+      isDayValid = true;
+    }
+  };
+  const handleHourInput = (e) => {
+    if (!isNumeric(e.data)) {
+      e.preventDefault;
+    }
+    hourValue = e.target.value;
+    if (
+      parseInt(hourValue) > 23 ||
+      hourValue === '' ||
+      parseInt(hourValue) < 0
+    ) {
+      isHourValid = false;
+    } else {
+      isHourValid = true;
+    }
+  };
+  const handleMinuteInput = (e) => {
+    if (!isNumeric(e.data)) {
+      e.preventDefault;
+    }
+    if (
+      parseInt(minuteValue) > 59 ||
+      minuteValue === '' ||
+      parseInt(minuteValue) < 0
+    ) {
+      isMinuteValid = false;
+    } else {
+      isMinuteValid = true;
+    }
+
+    minuteValue = e.target.value;
+  };
+  const handleCalculation = (e) => {
+    const birthday = new Date(
+      parseInt(yearValue),
+      parseInt(monthValue) - 1,
+      parseInt(dayValue),
+      parseInt(hourValue),
+      parseInt(minuteValue)
+    );
+    const billionSeconds = birthday.setSeconds(
+      birthday.getSeconds() + 1000000000
+    );
+
+    isFuture = billionSeconds > Date.now();
+
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    };
+    const billionDate = new Date(billionSeconds);
+    buttonClicked = true;
+    // @ts-ignore
+    dateDisplayed = billionDate.toLocaleTimeString('en-US', options);
+  };
+  const checkToEnable = () => {
+    if (
+      dayValue !== '' &&
+      monthValue !== '' &&
+      yearValue !== '' &&
+      hourValue !== '' &&
+      minuteValue !== '' &&
+      isDayValid &&
+      isMonthValid &&
+      isYearValid &&
+      isHourValid &&
+      isMinuteValid
+    ) {
+      isButtonDisabled = false;
+    } else {
+      isButtonDisabled = true;
+    }
+  };
+  const handleMinuteBlur = () => {
+    if (parseInt(minuteValue) < 10 && minuteValue.length < 2) {
+      minuteValue = '0' + minuteValue;
+    }
+  };
+  const handleHourBlur = () => {
+    if (parseInt(hourValue) < 10 && hourValue.length < 2) {
+      hourValue = '0' + hourValue;
+    }
+  };
+  const handleMonthBlur = () => {
+    if (parseInt(monthValue) < 10 && monthValue.length < 2) {
+      monthValue = '0' + monthValue;
+    }
+  };
+  const handleDayBlur = () => {
+    if (parseInt(dayValue) < 10 && dayValue.length < 2) {
+      dayValue = '0' + dayValue;
+    }
+  };
 </script>
 
 <canvas bind:this={canvas} />
@@ -72,41 +273,101 @@
     <div class="inputs-container">
       <div class="date-container">
         <div class="day-container">
-          <input type="number" />
+          <input
+            style="border-color:{`${
+              isDayValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
+            }`}; transition:all .3s linear"
+            bind:value={dayValue}
+            type="number"
+            on:input={handleDayInput}
+            on:input={checkToEnable}
+            on:click={handleDayClick}
+            on:blur={handleDayBlur}
+          />
         </div>
         <div class="day-label">DAY</div>
         <div class="slash-container-1 slash-container">
           <img src="../src/assets/slash.png" alt="slash" />
         </div>
         <div class="month-container">
-          <input type="number" />
+          <input
+            style="border-color:{`${
+              isMonthValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
+            }`}; transition:all .3s linear"
+            bind:value={monthValue}
+            on:input={handleMonthInput}
+            on:input={checkToEnable}
+            on:blur={handleMonthBlur}
+            type="number"
+          />
         </div>
         <div class="month-label">MONTH</div>
         <div class="slash-container-2 slash-container">
           <img src="../src/assets/slash.png" alt="slash" />
         </div>
         <div class="year-container">
-          <input type="number" class="year" maxlength="4" />
+          <input
+            style="border-color:{`${
+              isYearValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
+            }`}; transition:all .3s linear"
+            bind:value={yearValue}
+            on:input={handleYearInput}
+            on:input={checkToEnable}
+            type="number"
+            class="year"
+          />
         </div>
         <div class="year-label">YEAR</div>
       </div>
       <div class="time-container">
         <div class="hour-container">
-          <input type="number" />
+          <input
+            style="border-color:{`${
+              isHourValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
+            }`}; transition:all .3s linear"
+            bind:value={hourValue}
+            on:input={handleHourInput}
+            on:input={checkToEnable}
+            on:blur={handleHourBlur}
+            type="number"
+          />
         </div>
         <div class="hour-label">HOUR</div>
         <div class="colon-container">
           <img src="../src/assets/colon.png" alt="slash" />
         </div>
         <div class="minute-container">
-          <input type="number" />
+          <input
+            style="border-color:{`${
+              isMinuteValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
+            }`}; transition:all .3s linear"
+            bind:value={minuteValue}
+            on:input={handleMinuteInput}
+            on:input={checkToEnable}
+            on:blur={handleMinuteBlur}
+            type="number"
+          />
         </div>
         <div class="minute-label">MINUTE</div>
       </div>
     </div>
     <div class="calculate-button-container">
-      <button class="calculate-button">CALCULATE</button>
+      <button
+        disabled={isButtonDisabled}
+        on:click={handleCalculation}
+        class="calculate-button">CALCULATE</button
+      >
     </div>
+    {#if buttonClicked}
+      <div class="result-container">
+        Your billionth second <span>{isFuture ? 'will be' : 'was'}</span> on
+        <span class="result-date">{dateDisplayed}</span>
+      </div>
+    {:else}
+      <div class="result-container dummy">
+        Your billionth second will be on Monday, August 20, 2001 at 08:00:00 AM
+      </div>
+    {/if}
   </div>
 </main>
 
@@ -305,7 +566,7 @@
     outline: none;
     color: white;
     background-color: rgba(26, 26, 26, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2.5px solid rgba(255, 255, 255, 0.2);
     width: 2.2em;
     height: 2em;
     border-radius: 0.5em;
@@ -333,9 +594,12 @@
     background-color: rgba(21, 133, 224, 0.6);
     cursor: pointer;
     transition: all 0.3s ease;
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
   @media (hover: hover) {
-    .calculate-button:hover {
+    .calculate-button:hover:enabled {
       background-color: rgba(2, 99, 202, 0.6);
     }
   }
@@ -344,5 +608,19 @@
       flex-direction: column;
       gap: 0.7rem;
     }
+  }
+  .result-container {
+    border: 2px solid gold;
+    margin: auto;
+    max-width: 15em;
+    font-size: clamp(1.1rem, 2.5vmin, 3rem);
+  }
+  .dummy {
+    opacity: 0;
+  }
+  .result-date {
+    font-weight: 600;
+    text-shadow: 0 0 0.4em #c40242, 0 0 0.425em #c40242, 0 0 0.45em #c40242,
+      0 0 0.275em #c40242, 0 0 0.3em #c40242;
   }
 </style>
