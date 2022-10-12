@@ -104,6 +104,9 @@
         <div class="minute-label">MINUTE</div>
       </div>
     </div>
+    <div class="calculate-button-container">
+      <button class="calculate-button">CALCULATE</button>
+    </div>
   </div>
 </main>
 
@@ -318,6 +321,23 @@
   }
   .year {
     width: 3.6em;
+  }
+
+  .calculate-button {
+    font-weight: 700;
+    border: none;
+    font-size: clamp(1.1rem, 2.5vmin, 3rem);
+    padding: 0.12em 0.45em;
+    border-radius: 0.2em;
+    color: white;
+    background-color: rgba(21, 133, 224, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  @media (hover: hover) {
+    .calculate-button:hover {
+      background-color: rgba(2, 99, 202, 0.6);
+    }
   }
   @media (max-width: 400px) {
     .inputs-container {
