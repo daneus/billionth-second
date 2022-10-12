@@ -10,9 +10,8 @@
 </script>
 
 <canvas bind:this={canvas} />
-
-<!-- <main class="main-container">
-  <div class="title-container">
+<main class="main-container">
+  <header class="title-container">
     <div class="number-container">
       <div class="one-container">
         <svg
@@ -62,13 +61,52 @@
       </div>
     </div>
     <div class="subtitle">SECONDS</div>
-  </div>
+  </header>
   <div class="header-container">
     <h1 class="header">
       When will you be a <span class="billion">billion</span> seconds old?
     </h1>
   </div>
-</main> -->
+  <div class="user-input-container">
+    <div class="input-label">Enter your date of birth:</div>
+    <div class="inputs-container">
+      <div class="date-container">
+        <div class="day-container">
+          <input type="number" />
+        </div>
+        <div class="day-label">DAY</div>
+        <div class="slash-container-1 slash-container">
+          <img src="../src/assets/slash.png" alt="slash" />
+        </div>
+        <div class="month-container">
+          <input type="number" />
+        </div>
+        <div class="month-label">MONTH</div>
+        <div class="slash-container-2 slash-container">
+          <img src="../src/assets/slash.png" alt="slash" />
+        </div>
+        <div class="year-container">
+          <input type="number" class="year" maxlength="4" />
+        </div>
+        <div class="year-label">YEAR</div>
+      </div>
+      <div class="time-container">
+        <div class="hour-container">
+          <input type="number" />
+        </div>
+        <div class="hour-label">HOUR</div>
+        <div class="colon-container">
+          <img src="../src/assets/colon.png" alt="slash" />
+        </div>
+        <div class="minute-container">
+          <input type="number" />
+        </div>
+        <div class="minute-label">MINUTE</div>
+      </div>
+    </div>
+  </div>
+</main>
+
 <style lang="scss">
   @use '../src/sass/mixins/mixins' as m;
 
@@ -99,12 +137,12 @@
     flex-direction: column;
   }
   .title-container {
-    // border: 2px solid yellow;
+    border: 2px solid yellow;
   }
   .number-container {
     display: flex;
     flex-direction: row;
-    // border: 3px solid red;
+    border: 3px solid red;
     justify-content: center;
     column-gap: 0.75vmin;
     padding: 0 1.8vmin;
@@ -155,6 +193,7 @@
     color: white;
     text-align: center;
     font-size: clamp(0.4rem, 1.8vmin, 2.7rem);
+    border: 2px solid green;
   }
   .header {
     font-weight: 400;
@@ -164,5 +203,126 @@
     color: #fff;
     text-shadow: 0 0 0.4em #0467b8, 0 0 0.425em #1585e0, 0 0 0.45em #0467b8,
       0 0 0.275em #1585e0, 0 0 0.3em #1585e0;
+  }
+  .user-input-container {
+    color: white;
+    border: 2px solid cyan;
+    text-align: center;
+  }
+  .input-label {
+    font-size: clamp(1.1rem, 2.5vmin, 3rem);
+  }
+  .inputs-container {
+    border: 2px solid magenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+  }
+  .date-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+      'day slash1 month slash2 year'
+      'day-label . month-label . year-label';
+    grid-template-columns: auto 1fr auto 1fr auto;
+    grid-template-rows: 1fr auto;
+    column-gap: 1.7vmin;
+    border: 1px solid gold;
+  }
+  .day-container {
+    grid-area: day;
+  }
+  .slash-container-1 {
+    grid-area: slash1;
+  }
+  .month-container {
+    grid-area: month;
+  }
+  .slash-container-2 {
+    grid-area: slash2;
+  }
+  .year-container {
+    grid-area: year;
+  }
+  .day-label {
+    grid-area: day-label;
+  }
+  .month-label {
+    grid-area: month-label;
+  }
+  .year-label {
+    grid-area: year-label;
+  }
+  .time-container {
+    display: grid;
+    grid-template-areas:
+      'hour colon minute'
+      'hour-label . minute-label';
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.7vmin;
+    border: 2px solid brown;
+  }
+  .hour-container {
+    grid-area: hour;
+  }
+  .colon-container {
+    grid-area: colon;
+  }
+  .minute-container {
+    grid-area: minute;
+  }
+  .hour-label {
+    grid-area: hour-label;
+  }
+  .minute-label {
+    grid-area: minute-label;
+  }
+  .slash-container > img {
+    max-height: 4.3vmin;
+    max-width: 4.3vmin;
+    transform: rotateZ(20deg);
+  }
+  .colon-container > img {
+    max-height: 5vmin;
+    max-width: 5vmin;
+  }
+  .day-label,
+  .month-label,
+  .year-label,
+  .hour-label,
+  .minute-label {
+    font-weight: 500;
+    font-size: clamp(0.5rem, 1.3vmin, 3rem);
+  }
+  input {
+    font-size: clamp(1.2rem, 4vmin, 6rem);
+    outline: none;
+    color: white;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 2.2em;
+    height: 2em;
+    border-radius: 0.5em;
+    text-align: center;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  .year {
+    width: 3.6em;
+  }
+  @media (max-width: 400px) {
+    .inputs-container {
+      flex-direction: column;
+      gap: 0.7rem;
+    }
   }
 </style>
