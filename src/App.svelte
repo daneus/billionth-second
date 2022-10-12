@@ -234,31 +234,31 @@
         </svg>
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="../src/assets/Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.png" class="zero" alt="Number zero" />
       </div>
     </div>
     <div class="subtitle">SECONDS</div>
@@ -287,7 +287,7 @@
         </div>
         <div class="day-label">DAY</div>
         <div class="slash-container-1 slash-container">
-          <img src="../src/assets/slash.png" alt="slash" />
+          <img src="./slash.png" alt="slash" />
         </div>
         <div class="month-container">
           <input
@@ -303,7 +303,7 @@
         </div>
         <div class="month-label">MONTH</div>
         <div class="slash-container-2 slash-container">
-          <img src="../src/assets/slash.png" alt="slash" />
+          <img src="./slash.png" alt="slash" />
         </div>
         <div class="year-container">
           <input
@@ -334,7 +334,7 @@
         </div>
         <div class="hour-label">HOUR</div>
         <div class="colon-container">
-          <img src="../src/assets/colon.png" alt="slash" />
+          <img src="/colon.png" alt="colon" />
         </div>
         <div class="minute-container">
           <input
