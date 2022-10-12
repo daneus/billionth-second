@@ -394,19 +394,14 @@
     z-index: 0;
     width: auto;
     min-height: 100vh;
-    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .title-container {
-    border: 2px solid yellow;
-  }
   .number-container {
     display: flex;
     flex-direction: row;
-    border: 3px solid red;
     justify-content: center;
     column-gap: 0.75vmin;
     padding: 0 1.8vmin;
@@ -457,7 +452,7 @@
     color: white;
     text-align: center;
     font-size: clamp(0.4rem, 1.8vmin, 2.7rem);
-    border: 2px solid green;
+    margin: 1.5em auto;
   }
   .header {
     font-weight: 400;
@@ -470,14 +465,13 @@
   }
   .user-input-container {
     color: white;
-    border: 2px solid cyan;
     text-align: center;
   }
   .input-label {
     font-size: clamp(1.1rem, 2.5vmin, 3rem);
+    margin-bottom: 0.6em;
   }
   .inputs-container {
-    border: 2px solid magenta;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -493,7 +487,6 @@
     grid-template-columns: auto 1fr auto 1fr auto;
     grid-template-rows: 1fr auto;
     column-gap: 1.7vmin;
-    border: 1px solid gold;
   }
   .day-container {
     grid-area: day;
@@ -527,7 +520,6 @@
     justify-content: center;
     align-items: center;
     column-gap: 1.7vmin;
-    border: 2px solid brown;
   }
   .hour-container {
     grid-area: hour;
@@ -597,6 +589,7 @@
     &:disabled {
       cursor: not-allowed;
     }
+    margin: 1.2em auto;
   }
   @media (hover: hover) {
     .calculate-button:hover:enabled {
@@ -610,10 +603,9 @@
     }
   }
   .result-container {
-    border: 2px solid gold;
     margin: auto;
     max-width: 15em;
-    font-size: clamp(1.1rem, 2.5vmin, 3rem);
+    font-size: clamp(1rem, 2.5vmin, 3rem);
   }
   .dummy {
     opacity: 0;
