@@ -10,7 +10,8 @@
 </script>
 
 <canvas bind:this={canvas} />
-<main class="main-container">
+
+<!-- <main class="main-container">
   <div class="title-container">
     <div class="number-container">
       <div class="one-container">
@@ -67,8 +68,7 @@
       When will you be a <span class="billion">billion</span> seconds old?
     </h1>
   </div>
-</main>
-
+</main> -->
 <style lang="scss">
   @use '../src/sass/mixins/mixins' as m;
 
