@@ -238,31 +238,31 @@
         </svg>
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
       <div class="zero-container">
-        <img src="./Number0.png" class="zero" alt="Number zero" />
+        <img src="./Number0.svg" class="zero" alt="Number zero" />
       </div>
     </div>
     <div class="subtitle">SECONDS</div>
@@ -291,7 +291,7 @@
         </div>
         <div class="day-label">DAY</div>
         <div class="slash-container-1 slash-container">
-          <img src="./slash.png" alt="slash" />
+          <img src="./slash.svg" alt="slash" />
         </div>
         <div class="month-container">
           <input
@@ -307,7 +307,7 @@
         </div>
         <div class="month-label">MONTH</div>
         <div class="slash-container-2 slash-container">
-          <img src="./slash.png" alt="slash" />
+          <img src="./slash.svg" alt="slash" />
         </div>
         <div class="year-container">
           <input
@@ -338,7 +338,7 @@
         </div>
         <div class="hour-label">HOUR</div>
         <div class="colon-container">
-          <img src="/colon.png" alt="colon" />
+          <img src="/colon.svg" alt="colon" />
         </div>
         <div class="minute-container">
           <input
@@ -479,7 +479,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.8rem;
+    gap: 3rem;
   }
   .date-container {
     display: grid;
@@ -545,8 +545,8 @@
     transform: rotateZ(20deg);
   }
   .colon-container > img {
-    max-height: 5vmin;
-    max-width: 5vmin;
+    max-height: 3vmin;
+    max-width: 3vmin;
   }
   .day-label,
   .month-label,
