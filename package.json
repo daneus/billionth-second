@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
-    "dat.gui": "^0.7.9",
     "sass": "^1.55.0",
     "svelte": "^3.49.0",
     "svelte-preprocess": "^4.10.7",
