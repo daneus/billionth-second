@@ -287,9 +287,10 @@
             on:input={checkToEnable}
             on:click={handleDayClick}
             on:blur={handleDayBlur}
+            id="day"
           />
         </div>
-        <div class="day-label">DAY</div>
+        <label for="day" class="day-label">DAY</label>
         <div class="slash-container-1 slash-container">
           <img src="./slash.svg" alt="slash" />
         </div>
@@ -303,9 +304,10 @@
             on:input={checkToEnable}
             on:blur={handleMonthBlur}
             type="number"
+            id="month"
           />
         </div>
-        <div class="month-label">MONTH</div>
+        <label for="month" class="month-label">MONTH</label>
         <div class="slash-container-2 slash-container">
           <img src="./slash.svg" alt="slash" />
         </div>
@@ -319,9 +321,10 @@
             on:input={checkToEnable}
             type="number"
             class="year"
+            id="year"
           />
         </div>
-        <div class="year-label">YEAR</div>
+        <label for="year" class="year-label">YEAR</label>
       </div>
       <div class="time-container">
         <div class="hour-container">
@@ -334,9 +337,10 @@
             on:input={checkToEnable}
             on:blur={handleHourBlur}
             type="number"
+            id="hour"
           />
         </div>
-        <div class="hour-label">HOUR</div>
+        <label for="hour" class="hour-label">HOUR</label>
         <div class="colon-container">
           <img src="/colon.svg" alt="colon" />
         </div>
@@ -350,9 +354,10 @@
             on:input={checkToEnable}
             on:blur={handleMinuteBlur}
             type="number"
+            id="minute"
           />
         </div>
-        <div class="minute-label">MINUTE</div>
+        <label for="minute" class="minute-label">MINUTE</label>
       </div>
     </div>
     <div class="calculate-button-container">
