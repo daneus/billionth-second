@@ -542,7 +542,6 @@
   }
   .slash-container > img {
     max-height: 4.3vmin;
-    max-width: 4.3vmin;
     transform: rotateZ(20deg);
   }
   .colon-container > img {
@@ -579,7 +578,6 @@
   .year {
     width: 3.6em;
   }
-
   .calculate-button {
     font-weight: 700;
     border: none;
