@@ -36,16 +36,20 @@
       parseInt(monthValue),
       parseInt(yearValue)
     );
-    if (
-      parseInt(dayValue) > daysToCompare ||
-      dayValue === '' ||
-      parseInt(dayValue) < 1
-    ) {
-      if (isDayFieldClicked) {
-        isDayValid = false;
-      }
+    if ((dayValue && parseInt(dayValue) < 0) || parseInt(dayValue) > 31) {
+      isDayValid = false;
     } else {
-      isDayValid = true;
+      if (
+        parseInt(dayValue) > daysToCompare ||
+        dayValue === '' ||
+        parseInt(dayValue) < 1
+      ) {
+        if (isDayFieldClicked) {
+          isDayValid = false;
+        }
+      } else {
+        isDayValid = true;
+      }
     }
   };
   const handleMonthInput = (e) => {
