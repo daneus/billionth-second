@@ -23,6 +23,7 @@
   let isButtonDisabled = true;
   let dateDisplayed = '';
   let isFuture = false;
+  let isNotBorn = false;
 
   const handleDayClick = () => {
     isDayFieldClicked = true;
@@ -178,6 +179,14 @@
       parseInt(hourValue),
       parseInt(minuteValue)
     );
+
+    isNotBorn = birthday.valueOf() > Date.now();
+
+    if (birthday.valueOf() > Date.now()) {
+      dateDisplayed = 'Not born yet!';
+      return;
+    }
+
     const billionSeconds = birthday.setSeconds(
       birthday.getSeconds() + 1000000000
     );
@@ -397,10 +406,16 @@
       >
     </div>
     {#if buttonClicked}
-      <div class="result-container">
-        Your billionth second <span>{isFuture ? 'will be' : 'was'}</span> on
-        <span class="result-date">{dateDisplayed}</span>
-      </div>
+      {#if isNotBorn}
+        <div class="result-container">
+          <span class="result-date">{dateDisplayed}</span>
+        </div>
+      {:else}
+        <div class="result-container">
+          Your billionth second <span>{isFuture ? 'will be' : 'was'}</span> on
+          <span class="result-date">{dateDisplayed}</span>
+        </div>
+      {/if}
     {:else}
       <div class="result-container dummy">
         Your billionth second will be on Monday, August 20, 2001 at 08:00:00 AM
