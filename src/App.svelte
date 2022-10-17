@@ -28,10 +28,15 @@
     isDayFieldClicked = true;
   };
   const handleDayInput = (e) => {
-    if (!isNumeric(e.data)) {
-      e.preventDefault;
+    if (
+      e.charCode < 48 ||
+      e.charCode > 57 ||
+      (dayValue && dayValue.toString().length === 2)
+    ) {
+      e.preventDefault();
     }
-    dayValue = e.target.value;
+  };
+  const handleDayInput2 = (e) => {
     const daysToCompare = howManyDays(
       parseInt(monthValue),
       parseInt(yearValue)
@@ -283,7 +288,8 @@
             }`}; transition:all .3s linear"
             bind:value={dayValue}
             type="number"
-            on:input={handleDayInput}
+            on:keypress={handleDayInput}
+            on:input={handleDayInput2}
             on:input={checkToEnable}
             on:click={handleDayClick}
             on:blur={handleDayBlur}
