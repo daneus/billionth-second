@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { createScene } from './lib/scene';
-  import { howManyDays, isNumeric } from './helpers/helperFunctions';
+  import { howManyDays } from './helpers/helperFunctions';
 
   let canvas;
   onMount(() => {
@@ -58,10 +58,15 @@
     }
   };
   const handleMonthInput = (e) => {
-    if (!isNumeric(e.data)) {
-      e.preventDefault;
+    if (
+      e.charCode < 48 ||
+      e.charCode > 57 ||
+      (monthValue && monthValue.toString().length === 2)
+    ) {
+      e.preventDefault();
     }
-    monthValue = e.target.value;
+  };
+  const handleMonthInput2 = (e) => {
     if (
       parseInt(monthValue) > 12 ||
       monthValue === '' ||
@@ -89,11 +94,16 @@
     }
   };
   const handleYearInput = (e) => {
-    const currentYear = new Date().getFullYear();
-    if (!isNumeric(e.data)) {
-      e.preventDefault;
+    if (
+      e.charCode < 48 ||
+      e.charCode > 57 ||
+      (yearValue && yearValue.toString().length === 4)
+    ) {
+      e.preventDefault();
     }
-    yearValue = e.target.value;
+  };
+  const handleYearInput2 = (e) => {
+    const currentYear = new Date().getFullYear();
     if (
       parseInt(yearValue) > currentYear ||
       yearValue === '' ||
@@ -121,10 +131,15 @@
     }
   };
   const handleHourInput = (e) => {
-    if (!isNumeric(e.data)) {
-      e.preventDefault;
+    if (
+      e.charCode < 48 ||
+      e.charCode > 57 ||
+      (hourValue && hourValue.toString().length === 2)
+    ) {
+      e.preventDefault();
     }
-    hourValue = e.target.value;
+  };
+  const handleHourInput2 = (e) => {
     if (
       parseInt(hourValue) > 23 ||
       hourValue === '' ||
@@ -136,9 +151,15 @@
     }
   };
   const handleMinuteInput = (e) => {
-    if (!isNumeric(e.data)) {
-      e.preventDefault;
+    if (
+      e.charCode < 48 ||
+      e.charCode > 57 ||
+      (minuteValue && minuteValue.toString().length === 2)
+    ) {
+      e.preventDefault();
     }
+  };
+  const handleMinuteInput2 = (e) => {
     if (
       parseInt(minuteValue) > 59 ||
       minuteValue === '' ||
@@ -148,8 +169,6 @@
     } else {
       isMinuteValid = true;
     }
-
-    minuteValue = e.target.value;
   };
   const handleCalculation = (e) => {
     const birthday = new Date(
@@ -198,22 +217,22 @@
     }
   };
   const handleMinuteBlur = () => {
-    if (parseInt(minuteValue) < 10 && minuteValue.length < 2) {
+    if (parseInt(minuteValue) < 10 && minuteValue.toString().length < 2) {
       minuteValue = '0' + minuteValue;
     }
   };
   const handleHourBlur = () => {
-    if (parseInt(hourValue) < 10 && hourValue.length < 2) {
+    if (parseInt(hourValue) < 10 && hourValue.toString().length < 2) {
       hourValue = '0' + hourValue;
     }
   };
   const handleMonthBlur = () => {
-    if (parseInt(monthValue) < 10 && monthValue.length < 2) {
+    if (parseInt(monthValue) < 10 && monthValue.toString().length < 2) {
       monthValue = '0' + monthValue;
     }
   };
   const handleDayBlur = () => {
-    if (parseInt(dayValue) < 10 && dayValue.length < 2) {
+    if (parseInt(dayValue) < 10 && dayValue.toString().length < 2) {
       dayValue = '0' + dayValue;
     }
   };
@@ -306,7 +325,8 @@
               isMonthValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
             }`}; transition:all .3s linear"
             bind:value={monthValue}
-            on:input={handleMonthInput}
+            on:keypress={handleMonthInput}
+            on:input={handleMonthInput2}
             on:input={checkToEnable}
             on:blur={handleMonthBlur}
             type="number"
@@ -323,7 +343,8 @@
               isYearValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
             }`}; transition:all .3s linear"
             bind:value={yearValue}
-            on:input={handleYearInput}
+            on:keypress={handleYearInput}
+            on:input={handleYearInput2}
             on:input={checkToEnable}
             type="number"
             class="year"
@@ -339,7 +360,8 @@
               isHourValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
             }`}; transition:all .3s linear"
             bind:value={hourValue}
-            on:input={handleHourInput}
+            on:keypress={handleHourInput}
+            on:input={handleHourInput2}
             on:input={checkToEnable}
             on:blur={handleHourBlur}
             type="number"
@@ -356,7 +378,8 @@
               isMinuteValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
             }`}; transition:all .3s linear"
             bind:value={minuteValue}
-            on:input={handleMinuteInput}
+            on:keypress={handleMinuteInput}
+            on:input={handleMinuteInput2}
             on:input={checkToEnable}
             on:blur={handleMinuteBlur}
             type="number"
@@ -406,6 +429,7 @@
     user-select: none;
   }
   .main-container {
+    padding: 3rem;
     z-index: 0;
     width: auto;
     min-height: 100vh;
@@ -564,6 +588,7 @@
   .year-label,
   .hour-label,
   .minute-label {
+    margin-top: 0.5em;
     font-weight: 500;
     font-size: clamp(0.5rem, 1.3vmin, 3rem);
   }

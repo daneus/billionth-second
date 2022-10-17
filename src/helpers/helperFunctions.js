@@ -5,11 +5,6 @@ const isLeapYear = (year) => {
   return false;
 };
 
-const isNumeric = (input) => {
-  const numbersArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  return numbersArray.includes(input);
-};
-
 const howManyDays = (monthNumber, year) => {
   const thirtyOneDays = [1, 3, 5, 7, 8, 10, 12];
   const thirtyDays = [4, 6, 9, 11];
@@ -27,4 +22,4 @@ const howManyDays = (monthNumber, year) => {
   }
 };
 
-export { isNumeric, howManyDays };
+export { howManyDays };
