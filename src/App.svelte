@@ -4,10 +4,6 @@
   import { howManyDays } from './helpers/helperFunctions';
 
   let canvas;
-  onMount(() => {
-    createScene(canvas);
-  });
-
   let dayValue = '';
   let monthValue = '';
   let yearValue = '';
@@ -24,6 +20,17 @@
   let dateDisplayed = '';
   let isFuture = false;
   let isNotBorn = false;
+  let dayInput;
+  let monthInput;
+  let yearInput;
+  let hourInput;
+  let minuteInput;
+  let calcButton;
+
+  onMount(() => {
+    createScene(canvas);
+    dayInput.focus();
+  });
 
   const handleDayClick = () => {
     isDayFieldClicked = true;
@@ -38,6 +45,9 @@
     }
   };
   const handleDayInput2 = (e) => {
+    if (dayValue.toString().length === 2) {
+      monthInput.focus();
+    }
     const daysToCompare = howManyDays(
       parseInt(monthValue),
       parseInt(yearValue)
@@ -68,6 +78,9 @@
     }
   };
   const handleMonthInput2 = (e) => {
+    if (monthValue.toString().length === 2) {
+      yearInput.focus();
+    }
     if (
       parseInt(monthValue) > 12 ||
       monthValue === '' ||
@@ -104,6 +117,9 @@
     }
   };
   const handleYearInput2 = (e) => {
+    if (yearValue.toString().length === 4) {
+      hourInput.focus();
+    }
     const currentYear = new Date().getFullYear();
     if (
       parseInt(yearValue) > currentYear ||
@@ -141,6 +157,9 @@
     }
   };
   const handleHourInput2 = (e) => {
+    if (hourValue.toString().length === 2) {
+      minuteInput.focus();
+    }
     if (
       parseInt(hourValue) > 23 ||
       hourValue === '' ||
@@ -161,6 +180,9 @@
     }
   };
   const handleMinuteInput2 = (e) => {
+    if (minuteValue.toString().length === 2) {
+      calcButton.focus();
+    }
     if (
       parseInt(minuteValue) > 59 ||
       minuteValue === '' ||
@@ -172,6 +194,8 @@
     }
   };
   const handleCalculation = (e) => {
+    buttonClicked = true;
+
     const birthday = new Date(
       parseInt(yearValue),
       parseInt(monthValue) - 1,
@@ -183,6 +207,7 @@
     isNotBorn = birthday.valueOf() > Date.now();
 
     if (birthday.valueOf() > Date.now()) {
+      console.log(isNotBorn, 'Unborn!');
       dateDisplayed = 'Not born yet!';
       return;
     }
@@ -203,7 +228,6 @@
       second: 'numeric',
     };
     const billionDate = new Date(billionSeconds);
-    buttonClicked = true;
     // @ts-ignore
     dateDisplayed = billionDate.toLocaleTimeString('en-US', options);
   };
@@ -271,31 +295,76 @@
         </svg>
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
       <div class="zero-container">
-        <img src="./Number0.svg" class="zero" alt="Number zero" />
+        <img
+          src="./Number0.svg"
+          class="zero"
+          alt="Number zero"
+          draggable="false"
+        />
       </div>
     </div>
     <div class="subtitle">SECONDS</div>
@@ -315,7 +384,8 @@
               isDayValid ? 'rgba(255, 255, 255, 0.2)' : 'red'
             }`}; transition:all .3s linear"
             bind:value={dayValue}
-            type="number"
+            bind:this={dayInput}
+            type="text"
             on:keypress={handleDayInput}
             on:input={handleDayInput2}
             on:input={checkToEnable}
@@ -338,8 +408,9 @@
             on:input={handleMonthInput2}
             on:input={checkToEnable}
             on:blur={handleMonthBlur}
-            type="number"
+            type="text"
             id="month"
+            bind:this={monthInput}
           />
         </div>
         <label for="month" class="month-label">MONTH</label>
@@ -355,7 +426,8 @@
             on:keypress={handleYearInput}
             on:input={handleYearInput2}
             on:input={checkToEnable}
-            type="number"
+            bind:this={yearInput}
+            type="text"
             class="year"
             id="year"
           />
@@ -373,7 +445,8 @@
             on:input={handleHourInput2}
             on:input={checkToEnable}
             on:blur={handleHourBlur}
-            type="number"
+            bind:this={hourInput}
+            type="text"
             id="hour"
           />
         </div>
@@ -391,7 +464,8 @@
             on:input={handleMinuteInput2}
             on:input={checkToEnable}
             on:blur={handleMinuteBlur}
-            type="number"
+            bind:this={minuteInput}
+            type="text"
             id="minute"
           />
         </div>
@@ -402,6 +476,7 @@
       <button
         disabled={isButtonDisabled}
         on:click={handleCalculation}
+        bind:this={calcButton}
         class="calculate-button">CALCULATE</button
       >
     </div>
@@ -474,6 +549,7 @@
     color: #f5f5f5;
     font-size: clamp(1.2vmin, 5.5vmin, 7rem);
     font-weight: 600;
+    user-select: none;
   }
   .number-container > .zero-container:nth-child(2) {
     animation: tick36 10s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
@@ -623,13 +699,11 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  input[type='number'] {
-    -moz-appearance: textfield;
-  }
   .year {
     width: 3.6em;
   }
   .calculate-button {
+    user-select: none;
     font-weight: 700;
     border: none;
     font-size: clamp(1.1rem, 2.5vmin, 3rem);
