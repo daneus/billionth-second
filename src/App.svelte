@@ -686,6 +686,7 @@
   }
   .slash-container > img {
     max-height: 4.3vmin;
+    max-width: 2vmin;
     transform: rotateZ(20deg);
   }
   .colon-container > img {
