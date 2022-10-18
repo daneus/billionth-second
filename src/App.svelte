@@ -300,6 +300,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -308,6 +310,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -316,6 +320,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -324,6 +330,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -332,6 +340,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -340,6 +350,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -348,6 +360,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -356,6 +370,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
       <div class="zero-container">
@@ -364,6 +380,8 @@
           class="zero"
           alt="Number zero"
           draggable="false"
+          height="100"
+          width="100"
         />
       </div>
     </div>
@@ -396,7 +414,7 @@
         </div>
         <label for="day" class="day-label">DAY</label>
         <div class="slash-container-1 slash-container">
-          <img src="./slash.svg" alt="slash" />
+          <img src="./slash.svg" alt="slash" height="100" width="100" />
         </div>
         <div class="month-container">
           <input
@@ -415,7 +433,7 @@
         </div>
         <label for="month" class="month-label">MONTH</label>
         <div class="slash-container-2 slash-container">
-          <img src="./slash.svg" alt="slash" />
+          <img src="./slash.svg" alt="slash" height="100" width="100" />
         </div>
         <div class="year-container">
           <input
@@ -452,7 +470,7 @@
         </div>
         <label for="hour" class="hour-label">HOUR</label>
         <div class="colon-container">
-          <img src="/colon.svg" alt="colon" />
+          <img src="/colon.svg" alt="colon" height="100" width="100" />
         </div>
         <div class="minute-container">
           <input
