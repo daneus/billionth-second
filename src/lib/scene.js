@@ -28,9 +28,7 @@ const material = new THREE.MeshBasicMaterial({
 const tube = new THREE.Mesh(geometry, material);
 
 //Initiating Earth geometry
-const earthTexture = new THREE.TextureLoader().load(
-  './earthTexture.jpg'
-);
+const earthTexture = new THREE.TextureLoader().load('./earthTexture.jpg');
 const normalEarthTexture = new THREE.TextureLoader().load(
   './earthNormalMap.jpg'
 );
@@ -89,7 +87,7 @@ const addStar = () => {
 };
 
 //Adding stars to scene
-Array(600).fill().forEach(addStar);
+Array(300).fill().forEach(addStar);
 
 //Adding background texture
 const spaceTexture = new THREE.TextureLoader().load('./galaxy.jpg');
